@@ -1,0 +1,1064 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Moment Record</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css">
+  <script src="src/standalone.js" defer></script>
+</head>
+<body class="is-standalone">
+<svg class="sprite-sheet" aria-hidden="true">
+  <defs>
+    <symbol id="i-home" viewBox="0 0 24 24">
+      <path d="M4.2 10.8 12 4.4l7.8 6.4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+      <path d="M6.6 10.3v8.8h10.8v-8.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-books" viewBox="0 0 24 24">
+      <path d="M5 5.2c0-1.2 1-2.2 2.2-2.2H18v16H7.2A2.2 2.2 0 0 0 5 21.2V5.2Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/>
+      <path d="M18 19H7.2A2.2 2.2 0 0 0 5 21.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+      <path d="M9 6.6h5.6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M12 5.2v13.6M5.2 12h13.6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/>
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24">
+      <circle cx="10.3" cy="10.3" r="5.8" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="m14.7 14.7 4.2 4.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-user" viewBox="0 0 24 24">
+      <circle cx="12" cy="7.8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M5.4 18.8c1.8-2.9 4-4.3 6.6-4.3s4.8 1.4 6.6 4.3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-cat" viewBox="0 0 400 400">
+      <path d="M165.875 227.216C193.434 223.592 223.034 224.033 248.609 228.166" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+      <path d="M184.149 239.202C186.305 235.44 184.042 232.185 183.532 228.691" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+      <path d="M226.673 237.952C226.673 234.782 226.673 231.611 226.673 228.446" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+      <path d="M166.852 169.756C168.026 164.031 166.251 157.177 165.758 152.273" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+      <path d="M202.913 177.306C203.087 165.328 202.913 153.241 202.913 141.195" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+      <path d="M235.45 164.76C235.082 158.095 234.905 151.463 234.905 144.78" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+      <path d="M91.4068 153.586C42.1211 109.655 104.557 108.056 130.447 148.498" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+      <path d="M274.791 139.562C293.247 85.053 338.23 108.027 301.693 156.399" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+      <path d="M206.479 263.551C226.611 257.262 218.083 280.526 204.304 262.485" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+      <path d="M210.377 276.93C202.99 287.138 198.693 288.53 192.185 291" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+      <path d="M214.511 279.762C217.76 287.119 223.093 286.651 228.3 288.503" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+      <path d="M119.495 243.432C104.904 241.829 85.7296 241.203 73.1145 239.686" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+      <path d="M120.528 271.388C107.545 275.912 94.7465 280.922 81.668 285.124" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+      <path d="M324.384 228.526C311.275 231.643 298.895 237.582 286.778 243.511" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+      <path d="M328 269.807C316.039 268.883 303.812 268.297 286.778 269.407" fill="none" stroke="currentColor" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+    </symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24">
+      <path d="M8.3 17.2h7.4c-.8-.9-1.2-2-1.2-3.3v-2.6a3.7 3.7 0 1 0-7.4 0v2.6c0 1.3-.4 2.4-1.2 3.3Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/>
+      <path d="M10.4 18.8a1.9 1.9 0 0 0 3.2 0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24">
+      <path d="m14.6 5.6-6.2 6.2 6.2 6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9"/>
+    </symbol>
+    <symbol id="i-more" viewBox="0 0 24 24">
+      <circle cx="6.3" cy="12" r="1.4" fill="currentColor"/>
+      <circle cx="12" cy="12" r="1.4" fill="currentColor"/>
+      <circle cx="17.7" cy="12" r="1.4" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24">
+      <rect x="9.1" y="4.3" width="5.8" height="10.2" rx="2.9" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M6.7 11.5c0 3 2.2 5.1 5.3 5.1s5.3-2.1 5.3-5.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+      <path d="M12 16.8v3.1M9.5 19.9h5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24">
+      <path d="m14.4 5.1 4.4 4.4M6 18l3.2-.5 8.8-8.8a2 2 0 1 0-2.8-2.8l-8.8 8.8L6 18Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24">
+      <path d="M4.6 8.7h14.8c1.3 0 2.4 1.1 2.4 2.4v6.6c0 1.3-1.1 2.4-2.4 2.4H4.6c-1.3 0-2.4-1.1-2.4-2.4v-6.6c0-1.3 1.1-2.4 2.4-2.4Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/>
+      <path d="M7.4 8.7 8.8 6h6.4l1.4 2.7" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/>
+      <circle cx="12" cy="14.1" r="3.1" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24">
+      <path d="M7.2 4.1h9.6V19L12 15.4l-4.8 3.6V4.1Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M12 7.8v4.5l3.1 1.9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-send" viewBox="0 0 24 24">
+      <path d="m4 11.9 15-6c.8-.3 1.6.4 1.3 1.2l-6 15c-.4.9-1.6.9-1.9 0l-1.4-4-4-1.4c-.9-.3-.9-1.5 0-1.8l5.1-1.7L4 11.9Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.7"/>
+    </symbol>
+    <symbol id="i-play" viewBox="0 0 24 24">
+      <path d="M8 6.8v10.4c0 .9 1 1.5 1.8 1.1l8.3-5.2c.8-.5.8-1.7 0-2.2L9.8 5.7C9 5.3 8 5.9 8 6.8Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24">
+      <rect x="7.1" y="6.2" width="3.5" height="11.6" rx="1" fill="currentColor"/>
+      <rect x="13.4" y="6.2" width="3.5" height="11.6" rx="1" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-share" viewBox="0 0 24 24">
+      <circle cx="18" cy="6.1" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <circle cx="6.1" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <circle cx="18" cy="17.9" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <path d="M8 11.1 15.8 7M8 12.9l7.8 4.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"/>
+    </symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24">
+      <path d="M4 7.1h16M4 16.9h16M4 12h5.5M14.5 12H20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"/>
+      <circle cx="8.4" cy="7.1" r="1.8" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <circle cx="15.6" cy="16.9" r="1.8" fill="none" stroke="currentColor" stroke-width="1.7"/>
+    </symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24">
+      <path d="M12 8.4a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2Z" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <path d="m12 3.9.9 1.7 2 .4 1.4-1 1.8 1.8-1 1.4.4 2 .1.1 1.6.8-1.6.8-.5 2 1 1.4-1.8 1.8-1.4-1-2 .4-.9 1.7h-2l-.9-1.7-2-.4-1.4 1-1.8-1.8 1-1.4-.4-2-.1-.1-1.6-.8 1.6-.8.5-2-1-1.4L7.2 4.9l1.4 1 2-.4.9-1.7h1.8Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.25"/>
+    </symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24">
+      <path d="m9.2 5.5 6.1 6.1-6.1 6.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9"/>
+    </symbol>
+    <symbol id="i-skip-prev" viewBox="0 0 24 24">
+      <path d="M7.2 6.2v11.6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+      <path d="m16.8 6.8-6.6 5.2 6.6 5.2V6.8Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-skip-next" viewBox="0 0 24 24">
+      <path d="M16.8 6.2v11.6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+      <path d="m7.2 6.8 6.6 5.2-6.6 5.2V6.8Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24">
+      <path d="M12 15.3V5.5M8.6 9 12 5.5 15.4 9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+      <path d="M5.2 17v1.6c0 1.2 1 2.2 2.2 2.2h9.2c1.2 0 2.2-1 2.2-2.2V17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="m12 4.3 1.5 4.1 4.2 1.5-4.2 1.5-1.5 4.1-1.5-4.1-4.2-1.5 4.2-1.5L12 4.3Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24">
+      <path d="M17.6 14.2A7.2 7.2 0 0 1 9.8 4.6a7.8 7.8 0 1 0 7.8 9.6Z" fill="currentColor"/>
+    </symbol>
+
+    <symbol id="cat-avatar" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="52" fill="#eaf2fb"/>
+      <g transform="translate(13 16)">
+        <path d="M24 27 37 8l13 18M70 27 57 8 45 26" fill="#f8ddd1" stroke="#726966" stroke-linejoin="round" stroke-width="1.8"/>
+        <path d="M15 44c0-21.2 17.2-33.6 34.8-33.6 17.6 0 35.2 12.1 35.2 33.6 0 18.8-12.8 33.7-32.2 33.7C27.7 77.7 15 63 15 44Z" fill="#fffefb" stroke="#726966" stroke-linejoin="round" stroke-width="1.8"/>
+        <path d="M15.4 44.6c0-18.8 10.9-30.6 24.8-33v65.2C25.9 74.7 15.4 60.7 15.4 44.6Z" fill="#bbb8bc"/>
+        <path d="M38 16.8c4.2-1.3 10.2-.8 14.7.7 4.6 1.5 9.1 3.9 12 8.1" fill="none" stroke="#a7a2a5" stroke-linecap="round" stroke-width="1.4"/>
+        <circle cx="40.5" cy="45.5" r="2.8" fill="#2f2a28"/>
+        <circle cx="58.5" cy="45.5" r="2.8" fill="#2f2a28"/>
+        <ellipse cx="49.5" cy="52.2" rx="3.5" ry="2.6" fill="#f1bfa8"/>
+        <path d="M49.5 52.4v3.8" fill="none" stroke="#7a6660" stroke-linecap="round" stroke-width="1.2"/>
+        <path d="M33 50.5H22.5M33.5 55.6H21M66 50.5h10.5M65.5 55.6H78" fill="none" stroke="#938c8b" stroke-linecap="round" stroke-width="1.5"/>
+        <circle cx="33.4" cy="52.6" r="3.5" fill="#f8ddd1"/>
+        <circle cx="65.6" cy="52.6" r="3.5" fill="#f8ddd1"/>
+      </g>
+    </symbol>
+
+    <symbol id="cat-reader" viewBox="0 0 280 220">
+      <ellipse cx="126" cy="204" rx="114" ry="10" fill="#dce8f4"/>
+      <g transform="translate(14 10)">
+        <rect x="18" y="72" width="110" height="120" rx="2" fill="#d8b17f" stroke="#9f7c57" stroke-width="2"/>
+        <rect x="26" y="80" width="94" height="50" fill="#f3e3cc" stroke="#a88462" stroke-width="1.6"/>
+        <rect x="26" y="138" width="94" height="46" fill="#f3e3cc" stroke="#a88462" stroke-width="1.6"/>
+        <path d="M24 129h98" fill="none" stroke="#a88462" stroke-width="1.6"/>
+        <g stroke-linecap="round">
+          <path d="M31 103h34M31 110h40M31 117h30M31 162h38M31 169h42M31 176h35" fill="none" stroke="#7e9ab8" stroke-width="7"/>
+          <path d="M72 97v24M82 93v28M94 92v29M106 96v24" fill="none" stroke="#d9d2b0" stroke-width="10"/>
+          <path d="M73 154v24M84 150v28M96 149v29M108 153v24" fill="none" stroke="#b8d4da" stroke-width="10"/>
+          <path d="M32 103h34M32 162h38" fill="none" stroke="#efe5c8" stroke-width="4"/>
+        </g>
+        <g transform="translate(24 16)">
+          <path d="M66 50c-3-15 7-30 22-34 18-5 39 3 49 18 7 11 8 25 4 36l-6 20-13-1-48-3-17-6 9-30Z" fill="#fffefb" stroke="#726966" stroke-linejoin="round" stroke-width="2"/>
+          <path d="M68 49c-2-13 5-26 18-31 10-4 22-4 31 0-7 2-12 4-18 11-5 6-7 12-9 21l-22-1Z" fill="#b9b6bc"/>
+          <path d="M86 30c6-10 14-14 26-14 11 0 20 5 27 14" fill="none" stroke="#a4a0a4" stroke-linecap="round" stroke-width="2"/>
+          <circle cx="100" cy="48" r="2.8" fill="#2f2a28"/>
+          <circle cx="118" cy="49" r="2.8" fill="#2f2a28"/>
+          <ellipse cx="109" cy="55.5" rx="3.5" ry="2.5" fill="#efbba3"/>
+          <path d="M92 54H79M93 59H78M126 54h13M125 59h14" fill="none" stroke="#8d8887" stroke-linecap="round" stroke-width="1.5"/>
+        </g>
+      </g>
+    </symbol>
+
+    <symbol id="cat-dream" viewBox="0 0 280 220">
+      <ellipse cx="145" cy="202" rx="88" ry="12" fill="#dce8f4"/>
+      <g transform="translate(122 20)">
+        <rect x="26" y="74" width="98" height="116" fill="#fffefa" stroke="#b8b3ae" stroke-width="2"/>
+        <path d="M36 86v94M62 86v94M88 86v94M26 112h98M26 138h98M26 164h98" fill="none" stroke="#d7d3cd" stroke-width="1.4"/>
+        <rect x="0" y="52" width="150" height="22" fill="#fffefa" stroke="#b8b3ae" stroke-width="2"/>
+        <rect x="8" y="190" width="136" height="8" rx="2" fill="#fffefa" stroke="#b8b3ae" stroke-width="1.6"/>
+        <g transform="translate(91 18)">
+          <path d="M22 46c-2-11 4-22 15-25 12-3 28 3 35 14 6 9 6 20 3 29l-4 17-11-1-34-2-13-6 9-26Z" fill="#fffefb" stroke="#726966" stroke-linejoin="round" stroke-width="1.8"/>
+          <path d="M20 45c-2-10 4-20 13-24 5-2 11-3 17-2-6 3-10 6-13 11-3 5-4 9-6 16l-11-1Z" fill="#b7b4b9"/>
+          <path d="M39 29c4-6 9-9 16-9s12 3 17 9" fill="none" stroke="#a4a0a4" stroke-linecap="round" stroke-width="1.5"/>
+          <circle cx="47" cy="44" r="2.3" fill="#2f2a28"/>
+          <circle cx="62" cy="45" r="2.3" fill="#2f2a28"/>
+          <ellipse cx="54.5" cy="51.5" rx="3" ry="2.1" fill="#efbba3"/>
+        </g>
+        <g transform="translate(84 69)">
+          <path d="M54 51c8-3 15-9 19-19 5-13 4-33-9-48 15 6 23 18 26 31 4 16 1 31-8 45-8 11-17 16-28 18V51Z" fill="#d9ebc4" stroke="#8aa46a" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M54 52c3-9 5-24 5-40" fill="none" stroke="#8aa46a" stroke-linecap="round" stroke-width="1.7"/>
+          <path d="M48 22c-9-8-17-9-24-7 6 1 12 4 17 11 2-2 4-3 7-4ZM69 25c8-8 16-10 23-8-6 2-12 6-16 12-2-1-4-3-7-4ZM45 47c-10-3-18-1-24 3 8 0 14 2 21 7 1-3 2-6 3-10ZM72 48c9-5 17-5 24-3-7 1-13 5-18 11-2-3-4-6-6-8ZM49 69c-8 5-12 11-13 18 5-6 10-9 18-12-2-2-3-4-5-6ZM67 72c9 4 15 10 18 18-7-5-13-8-22-10 2-2 3-5 4-8Z" fill="#b8d694" stroke="#8aa46a" stroke-width="1.2" stroke-linejoin="round"/>
+          <rect x="36" y="89" width="33" height="22" rx="3" fill="#c68d58" stroke="#97643d" stroke-width="1.6"/>
+        </g>
+      </g>
+    </symbol>
+
+    <symbol id="cat-lounge" viewBox="0 0 280 220">
+      <ellipse cx="138" cy="200" rx="90" ry="12" fill="#dde9f4"/>
+      <g transform="translate(112 28)">
+        <path d="M46 49c-2-11 4-22 16-25 12-4 27 2 34 13 6 8 7 20 4 29l-5 18-11-1-33-2-14-6 9-26Z" fill="#fffefb" stroke="#726966" stroke-linejoin="round" stroke-width="1.8"/>
+        <path d="M45 48c-2-10 3-20 12-24 4-2 9-3 15-3-5 3-9 6-12 11-3 5-4 9-5 16H45Z" fill="#b9b7bc"/>
+        <path d="M63 33c3-6 8-9 15-10 7 0 13 3 18 8" fill="none" stroke="#a4a0a4" stroke-linecap="round" stroke-width="1.4"/>
+        <circle cx="70" cy="47" r="2.3" fill="#2f2a28"/>
+        <circle cx="85" cy="48" r="2.3" fill="#2f2a28"/>
+        <ellipse cx="77.5" cy="54.5" rx="3" ry="2.1" fill="#efbba3"/>
+      </g>
+      <g transform="translate(20 78)">
+        <path d="M24 98c-6-38 0-79 18-105 14-20 38-28 61-19-14 2-24 10-34 27-11 20-17 55-15 92l-30 5Z" fill="#c79563" stroke="#8f6847" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M38 92c-10-35-7-70 7-93 13-20 35-27 55-19-12 3-22 12-30 28-8 17-10 47-4 79l-28 5Z" fill="#f0d9a2" stroke="#8f6847" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M62 12c13 1 24 10 32 27M47 26c16 0 35 10 45 29M38 42c16 1 39 12 50 32M33 60c17 2 40 14 51 33M32 79c18 2 36 13 46 30" fill="none" stroke="#a9855a" stroke-width="1.3" stroke-linecap="round"/>
+        <path d="M52 99c6 15 15 24 28 29 13 4 28 2 41-6 17-12 27-33 28-62 0-17-5-32-12-44 18 16 29 40 29 67 0 27-10 53-31 69-18 14-40 16-60 10-17-5-29-17-39-35l16-28Z" fill="#fffefb" stroke="#726966" stroke-linejoin="round" stroke-width="2"/>
+        <path d="M85 39c8-10 19-15 33-15 16 0 32 8 42 21" fill="none" stroke="#d6a65f" stroke-linecap="round" stroke-width="4"/>
+        <path d="M79 37c4-7 10-13 18-16 7-3 15-4 24-3-7 2-12 4-18 9-6 5-10 10-14 18l-10-8Z" fill="#efc879"/>
+        <circle cx="109" cy="54" r="3.2" fill="#2f2a28"/>
+        <circle cx="128" cy="55" r="3.2" fill="#2f2a28"/>
+        <ellipse cx="118.5" cy="62.5" rx="3.8" ry="2.5" fill="#efbba3"/>
+        <path d="M95 61H82M95 67H80M142 61h13M142 67h14" fill="none" stroke="#9a8c7b" stroke-linecap="round" stroke-width="1.6"/>
+        <rect x="103" y="72" width="28" height="34" rx="14" fill="#fffefb" stroke="#726966" stroke-width="1.7"/>
+        <path d="M111 77c2 10 2 20 1 29M124 77c1 10 1 20 1 29" fill="none" stroke="#ece7df" stroke-width="1.4"/>
+        <path d="M97 90c-7 1-12 6-14 13 5-2 10-3 14-3v-10ZM136 90c7 1 12 6 14 13-5-2-10-3-14-3v-10Z" fill="#fffefb" stroke="#726966" stroke-width="1.3"/>
+        <path d="M101 97c2 11 7 23 17 32M134 96c-2 11-7 23-17 32" fill="none" stroke="#726966" stroke-linecap="round" stroke-width="1.6"/>
+        <path d="M98 126c4 10 11 19 20 24M140 123c-4 12-11 22-21 28" fill="none" stroke="#d6a65f" stroke-linecap="round" stroke-width="4"/>
+        <rect x="112" y="74" width="34" height="34" rx="15" fill="#f4ecd8" stroke="#8c7a60" stroke-width="1.7"/>
+        <path d="M146 88c7 0 13 6 13 13v4h-26v-4c0-7 6-13 13-13Z" fill="#fffdf7" stroke="#8c7a60" stroke-width="1.4"/>
+      </g>
+    </symbol>
+
+    <symbol id="cat-tea" viewBox="0 0 280 220">
+      <ellipse cx="140" cy="201" rx="88" ry="12" fill="#dce8f4"/>
+      <g transform="translate(18 20)">
+        <path d="M50 163c-9-55-2-112 25-136 19-16 46-18 66-6-19 1-36 7-46 24-14 23-18 62-12 111l-33 7Z" fill="#d7b078" stroke="#8d6747" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M77 166c-7-52-2-105 18-127 18-20 43-24 62-12-18 1-32 8-42 26-10 18-13 56-8 106l-30 7Z" fill="#f0dbb0" stroke="#8d6747" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M89 33c13 3 28 15 40 35M72 49c15 2 33 15 45 34M64 69c16 2 37 16 48 36M59 91c15 3 34 16 45 36M58 114c13 4 28 15 38 32M63 140c11 4 24 13 33 26" fill="none" stroke="#a9865b" stroke-width="1.4" stroke-linecap="round"/>
+        <g transform="translate(74 42)">
+          <path d="M38 48c-2-12 4-23 16-28 13-5 29 2 37 14 5 8 7 19 4 29l-4 18-11-1-37-2-14-7 9-23Z" fill="#fffefb" stroke="#726966" stroke-linejoin="round" stroke-width="1.8"/>
+          <path d="M36 46c-1-10 3-20 12-25 6-3 12-4 18-3-7 2-11 5-15 10-3 5-5 10-6 18H36Z" fill="#efc67a"/>
+          <path d="M55 30c5-7 10-9 18-9 8 0 14 2 19 8" fill="none" stroke="#d4a661" stroke-linecap="round" stroke-width="2.2"/>
+          <circle cx="60" cy="47" r="2.7" fill="#2f2a28"/>
+          <circle cx="78" cy="47" r="2.7" fill="#2f2a28"/>
+          <ellipse cx="69" cy="54" rx="3.4" ry="2.3" fill="#efbba3"/>
+          <path d="M47 53H34M47 58H33M91 53h13M90 58h14" fill="none" stroke="#8f8786" stroke-linecap="round" stroke-width="1.5"/>
+          <path d="M52 69c-3 12-4 27-2 38M85 69c3 12 4 27 2 38" fill="none" stroke="#726966" stroke-linecap="round" stroke-width="1.7"/>
+          <path d="M43 92c-7-2-14 0-18 6 7 0 12 1 19 5-1-4-1-7-1-11ZM95 92c7-2 14 0 18 6-7 0-12 1-19 5 1-4 1-7 1-11Z" fill="#fffefb" stroke="#726966" stroke-width="1.3"/>
+          <rect x="58" y="72" width="22" height="34" rx="11" fill="#fffefb" stroke="#726966" stroke-width="1.6"/>
+          <rect x="88" y="75" width="30" height="34" rx="5" fill="#fff9ef" stroke="#8d7a5f" stroke-width="1.7"/>
+          <path d="M118 82c7 0 13 6 13 13 0 7-6 13-13 13" fill="none" stroke="#8d7a5f" stroke-width="1.5"/>
+          <path d="M88 87h30" fill="none" stroke="#8d7a5f" stroke-width="1.2"/>
+        </g>
+      </g>
+    </symbol>
+
+    <symbol id="cat-window" viewBox="0 0 280 220">
+      <ellipse cx="142" cy="201" rx="88" ry="12" fill="#dce8f4"/>
+      <g transform="translate(44 22)">
+        <rect x="44" y="42" width="108" height="132" fill="#fffefa" stroke="#b9b4af" stroke-width="2"/>
+        <rect x="34" y="26" width="128" height="20" fill="#fffefa" stroke="#b9b4af" stroke-width="2"/>
+        <rect x="36" y="174" width="124" height="8" rx="2" fill="#fffefa" stroke="#b9b4af" stroke-width="1.6"/>
+        <path d="M98 46v126M44 109h108" fill="none" stroke="#d7d3cd" stroke-width="1.4"/>
+        <g transform="translate(14 104)">
+          <path d="M34 47c-2-12 4-23 15-27 13-4 29 2 37 14 5 8 7 19 4 29l-5 19-11-1-36-2-14-7 10-25Z" fill="#fffefb" stroke="#726966" stroke-linejoin="round" stroke-width="1.8"/>
+          <path d="M33 46c-1-10 3-20 12-24 6-3 12-4 18-3-6 2-11 5-14 10-4 4-5 9-6 17H33Z" fill="#b9b6bb"/>
+          <path d="M51 30c4-7 10-9 18-9 8 0 14 3 18 8" fill="none" stroke="#a4a0a4" stroke-linecap="round" stroke-width="1.6"/>
+          <circle cx="57" cy="46.5" r="2.6" fill="#2f2a28"/>
+          <circle cx="75" cy="47.5" r="2.6" fill="#2f2a28"/>
+          <ellipse cx="66" cy="54.5" rx="3.3" ry="2.3" fill="#efbba3"/>
+          <path d="M44 53H31M44 58H30M88 53h13M87 58h14" fill="none" stroke="#8f8786" stroke-linecap="round" stroke-width="1.5"/>
+          <path d="M49 68c-2 11-2 23-1 34M82 68c2 11 2 23 0 34" fill="none" stroke="#726966" stroke-linecap="round" stroke-width="1.7"/>
+          <path d="M44 90c-6-1-13 2-16 8 6-1 11-1 17 2-1-3-1-6-1-10Z" fill="#fffefb" stroke="#726966" stroke-width="1.2"/>
+          <path d="M88 90c6-1 13 2 16 8-6-1-11-1-17 2 1-3 1-6 1-10Z" fill="#fffefb" stroke="#726966" stroke-width="1.2"/>
+          <rect x="55" y="72" width="21" height="33" rx="10.5" fill="#fffefb" stroke="#726966" stroke-width="1.5"/>
+          <path d="M77 84c10-6 18-8 24-7-5 1-9 3-13 8 3 2 6 5 8 9-7-1-12-3-19-7" fill="#d8ebc1" stroke="#86a267" stroke-width="1.4" stroke-linejoin="round"/>
+          <circle cx="101" cy="77" r="3.2" fill="#cfe3ab" stroke="#86a267" stroke-width="1.2"/>
+        </g>
+        <g transform="translate(124 101)">
+          <path d="M22 48c7-2 14-8 18-17 5-12 4-28-4-39 10 5 16 13 18 22 4 14 2 28-5 40-5 9-13 14-24 17l-3-23Z" fill="#d9ebc4" stroke="#8aa46a" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M22 48c2-8 3-18 3-30" fill="none" stroke="#8aa46a" stroke-linecap="round" stroke-width="1.6"/>
+          <path d="M19 23c-6-7-12-8-18-7 5 1 10 4 14 10 2-1 2-2 4-3ZM30 25c6-7 12-8 18-6-5 2-9 5-13 10-1-2-3-3-5-4ZM17 41c-8-3-14-2-19 1 6 1 11 3 16 8 1-3 2-5 3-9ZM32 43c8-3 14-3 20 0-7 1-12 4-17 9-1-3-1-6-3-9ZM21 60c-6 4-9 9-10 15 4-5 8-8 14-11-2-1-3-2-4-4ZM33 62c7 3 11 8 14 15-5-4-10-6-16-8 1-2 2-4 2-7Z" fill="#b8d694" stroke="#8aa46a" stroke-width="1.1" stroke-linejoin="round"/>
+          <rect x="8" y="77" width="30" height="22" rx="3" fill="#c68d58" stroke="#97643d" stroke-width="1.5"/>
+        </g>
+      </g>
+    </symbol>
+
+    <symbol id="cats-duo" viewBox="0 0 280 220">
+      <ellipse cx="140" cy="196" rx="100" ry="14" fill="#dce8f5"/>
+      <g transform="translate(34 30)">
+        <g>
+          <path d="M20 62 31 41l11 16M65 62 54 41 43 57" fill="#f9d9c8" stroke="#7d736e" stroke-linejoin="round" stroke-width="1.8"/>
+          <path d="M16 78c0-22.5 17-36 34-36s34 13.5 34 36c0 18.5-13 33-34 33S16 96.5 16 78Z" fill="#fffefb" stroke="#7d736e" stroke-linejoin="round" stroke-width="1.8"/>
+          <path d="M16.4 78.4c0-20.7 11.8-32.9 26.6-35.1v68.2c-14.7-1.9-26.6-17.6-26.6-33.1Z" fill="#b2b0b5"/>
+          <circle cx="40.8" cy="81" r="2.8" fill="#2f2a28"/>
+          <circle cx="57.2" cy="81" r="2.8" fill="#2f2a28"/>
+          <ellipse cx="49" cy="87.4" rx="3.5" ry="2.5" fill="#f0b99d"/>
+          <path d="M34.5 86H24M35 91H23M63 86h10.5M63 91h11.5" fill="none" stroke="#908787" stroke-linecap="round" stroke-width="1.5"/>
+        </g>
+        <g transform="translate(108 6)">
+          <path d="M20 62 31 41l11 16M65 62 54 41 43 57" fill="#f9d9c8" stroke="#7d736e" stroke-linejoin="round" stroke-width="1.8"/>
+          <path d="M16 78c0-22.5 17-36 34-36s34 13.5 34 36c0 18.5-13 33-34 33S16 96.5 16 78Z" fill="#fffefb" stroke="#7d736e" stroke-linejoin="round" stroke-width="1.8"/>
+          <path d="M16.5 78.2c0-20.2 12-32.5 26.8-35v67.6c-14.9-1.9-26.8-17-26.8-32.6Z" fill="#efc67a"/>
+          <circle cx="40.8" cy="81" r="2.8" fill="#2f2a28"/>
+          <circle cx="57.2" cy="81" r="2.8" fill="#2f2a28"/>
+          <ellipse cx="49" cy="87.4" rx="3.5" ry="2.5" fill="#f0b99d"/>
+          <path d="M34.5 86H24M35 91H23M63 86h10.5M63 91h11.5" fill="none" stroke="#908787" stroke-linecap="round" stroke-width="1.5"/>
+        </g>
+      </g>
+    </symbol>
+
+    <symbol id="cat-headphones" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="52" fill="#edf4fb"/>
+      <path d="M30 62a30 30 0 0 1 60 0" fill="none" stroke="#7da4cd" stroke-linecap="round" stroke-width="8"/>
+      <rect x="24" y="58" width="12" height="22" rx="6" fill="#7da4cd"/>
+      <rect x="84" y="58" width="12" height="22" rx="6" fill="#7da4cd"/>
+      <g transform="translate(15 18)">
+        <path d="M20 24 31 7l11 17M69 24 58 7 47 24" fill="#f9d9c8" stroke="#7e746f" stroke-linejoin="round" stroke-width="1.8"/>
+        <path d="M14 40c0-19.5 15.5-31 31-31 15.7 0 31 11.5 31 31 0 16.6-10.1 30.7-25.7 30.7C24 70.7 14 56.6 14 40Z" fill="#fffefb" stroke="#7e746f" stroke-linejoin="round" stroke-width="1.8"/>
+        <path d="M14.5 40.4c0-18.2 10.7-28.5 23.8-30.2v60.1C23.9 69.2 14.5 55.9 14.5 40.4Z" fill="#b1afb5"/>
+        <circle cx="37.5" cy="43" r="2.6" fill="#2f2a28"/>
+        <circle cx="53.5" cy="43" r="2.6" fill="#2f2a28"/>
+        <ellipse cx="45.5" cy="49.1" rx="3.2" ry="2.3" fill="#f0b99d"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="ambient">
+  <div class="ambient__orb ambient__orb--a"></div>
+  <div class="ambient__orb ambient__orb--b"></div>
+  <div class="ambient__orb ambient__orb--c"></div>
+  <div class="ambient__leaf ambient__leaf--a"></div>
+  <div class="ambient__leaf ambient__leaf--b"></div>
+</div>
+
+<div class="app-layout">
+  <main class="phone-stage">
+    <div class="phone-shell">
+      <div class="screen-viewport">
+        <section class="screen screen--home is-active" id="screen-home" data-screen="home" data-nav="primary">
+          <div class="home-shell">
+            <header class="hero-top hero-top--unified hero-top--home">
+              <div class="hero-top__profile">
+                <div class="avatar">
+                  <img src="assets/cat-hd-smile.png" alt="Momo avatar">
+                </div>
+                <div>
+                  <p class="eyebrow">Hi, Momo</p>
+                  <h2 class="display">What are we thinking today?</h2>
+                </div>
+              </div>
+            </header>
+
+            <div class="home-carousel">
+              <article class="home-slide is-active" data-home-slide="0">
+                <div class="home-slide__layout home-slide__layout--reading">
+                  <div class="home-slide__copy">
+                    <div class="home-slide__copy-head">
+                      <p class="eyebrow">Notes Today</p>
+                      <h3></h3>
+                    </div>
+                    <div class="home-notes-lanes">
+                      <div class="home-notes-bubbles" id="home-notes-bubbles-top"></div>
+                      <div class="home-notes-bubbles" id="home-notes-bubbles-bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-bookshelf" data-screen="bookshelf" data-nav="primary">
+          <div class="books-page">
+            <header class="page-chrome page-chrome--compact">
+              <button type="button" class="icon-btn" aria-label="Back" data-back>
+                <svg class="icon"><use href="#i-arrow-left"></use></svg>
+              </button>
+              <div>
+                <h2 class="display">Books</h2>
+              </div>
+              <div class="page-chrome__actions">
+                <button type="button" class="icon-btn" aria-label="Manage books" data-booksheet-toggle>
+                  <svg class="icon"><use href="#i-more"></use></svg>
+                </button>
+              </div>
+            </header>
+
+            <label class="searchbox searchbox--inline" for="books-search-input">
+              <svg class="icon"><use href="#i-search"></use></svg>
+              <input id="books-search-input" type="search" placeholder="Search books">
+            </label>
+
+            <div id="bookshelf-list" class="books-groups"></div>
+          </div>
+        </section>
+
+        <section class="screen screen--detail" id="screen-book-detail" data-screen="book-detail" data-nav="none">
+          <div class="detail-hero detail-hero--unified">
+            <header class="page-chrome page-chrome--overlay">
+              <button type="button" class="icon-btn" aria-label="Back" data-back>
+                <svg class="icon"><use href="#i-arrow-left"></use></svg>
+              </button>
+            </header>
+
+            <div class="detail-hero__content">
+              <div class="detail-cover" data-cover-preview></div>
+              <div class="detail-meta">
+                <h2 class="display" data-bind="book-title">Sapiens</h2>
+                <p class="detail-meta__author" data-bind="book-author">Yuval Noah Harari</p>
+                <div class="detail-meta__stats">
+                  <span data-bind="book-pages">18 notes</span>
+                  <strong>Updated today</strong>
+                </div>
+                <div class="detail-finish" id="detail-finish" data-finish-wrap>
+                  <button type="button" class="detail-finish__trigger" id="detail-finish-trigger" data-finish-toggle>
+                    <span data-finish-trigger-label>补充结束时间</span>
+                    <span class="detail-finish__value" data-finish-display hidden></span>
+                  </button>
+                  <div class="detail-finish__editor" id="detail-finish-editor" data-finish-editor hidden>
+                    <input id="detail-finish-input" type="date">
+                    <button type="button" class="detail-finish__save" id="detail-finish-save" data-finish-save>保存</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-body">
+            <label class="searchbox searchbox--inline searchbox--notes" for="book-notes-search-input">
+              <svg class="icon"><use href="#i-search"></use></svg>
+              <input id="book-notes-search-input" type="search" placeholder="Search notes in this book">
+            </label>
+
+            <div class="segmented-tabs" role="tablist" aria-label="Book detail tabs">
+              <button type="button" class="segmented-tabs__button is-active" data-book-tab="notes">Notes</button>
+              <button type="button" class="segmented-tabs__button" data-book-tab="ai">AI Chat</button>
+            </div>
+
+            <div class="book-panels">
+              <div class="book-panel is-active" id="book-notes-panel" data-panel="notes"></div>
+
+              <div class="book-panel book-panel--ai" data-panel="ai">
+                <section class="companion-flow">
+                  <article class="companion-preview companion-preview--integrated">
+                    <div class="companion-preview__avatar">
+                      <img src="assets/cat-hd-smile.png" alt="Momo avatar">
+                    </div>
+                    <div>
+                      <p class="eyebrow">Reading Companion</p>
+                      <h3>Shared imagination keeps coming back as the central thread.</h3>
+                      <p>Your last conversation connected ancient myths to modern platforms and rituals.</p>
+                    </div>
+                  </article>
+
+                  <div class="chat-preview-list chat-preview-list--inline">
+                    <article class="chat-preview chat-preview--prompt">
+                      <p class="eyebrow">Question</p>
+                      <p>What part of the book still feels unresolved to you?</p>
+                    </article>
+                    <article class="chat-preview chat-preview--reply">
+                      <p class="eyebrow">Your thought</p>
+                      <p>I want to understand whether shared myths always unify, or if they can quietly divide us too.</p>
+                    </article>
+                  </div>
+
+                  <div class="companion-flow__footer">
+                    <button type="button" class="btn btn--primary btn--wide" data-target="ai-chat">Continue immersive chat</button>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-capture" data-screen="capture" data-nav="primary">
+          <div class="capture-shell">
+            <header class="page-chrome">
+              <div>
+                <p class="eyebrow">Capture Thought</p>
+                <h2 class="display">Catch the feeling before it fades.</h2>
+              </div>
+            </header>
+
+            <div class="capture-hero capture-hero--unified">
+              <div class="capture-hero__art capture-hero__art--wide">
+                <img src="assets/cat-hd-smile-cutout.png" alt="Capture cat">
+              </div>
+            </div>
+
+            <div class="capture-entry-grid">
+              <button type="button" class="capture-entry" data-target="capture-voice">
+                <span class="capture-entry__icon"><svg class="icon"><use href="#i-mic"></use></svg></span>
+                <strong>Voice</strong>
+              </button>
+              <button type="button" class="capture-entry" data-target="capture-text">
+                <span class="capture-entry__icon"><svg class="icon"><use href="#i-pen"></use></svg></span>
+                <strong>Text</strong>
+              </button>
+              <button type="button" class="capture-entry" data-target="capture-image">
+                <span class="capture-entry__icon"><svg class="icon"><use href="#i-camera"></use></svg></span>
+                <strong>Image</strong>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-capture-voice" data-screen="capture-voice" data-nav="none">
+          <header class="page-chrome page-chrome--leading">
+            <button type="button" class="icon-btn" aria-label="Back" data-back>
+              <svg class="icon"><use href="#i-arrow-left"></use></svg>
+            </button>
+            <div>
+              <p class="eyebrow">Voice</p>
+              <h2 class="display">Speak with Momo</h2>
+            </div>
+          </header>
+
+          <article class="capture-panel capture-panel--single">
+            <div class="voice-orb" id="voice-orb">
+              <span></span><span></span><span></span>
+              <svg class="icon"><use href="#i-mic"></use></svg>
+            </div>
+            <p class="capture-status" id="voice-status">Microphone ready. Start recording to capture a thought.</p>
+            <button type="button" class="btn btn--primary btn--wide" id="voice-record-toggle">Start recording</button>
+            <p class="capture-transcript-preview" id="voice-transcript-preview">Your transcript will appear here while you speak.</p>
+            <audio id="voice-audio-preview" class="capture-audio" controls hidden></audio>
+            <button type="button" class="btn btn--secondary btn--wide" id="voice-process-button">Transcribe and process</button>
+          </article>
+        </section>
+
+        <section class="screen" id="screen-capture-text" data-screen="capture-text" data-nav="none">
+          <header class="page-chrome page-chrome--leading">
+            <button type="button" class="icon-btn" aria-label="Back" data-back>
+              <svg class="icon"><use href="#i-arrow-left"></use></svg>
+            </button>
+            <div>
+              <p class="eyebrow">Text</p>
+              <h2 class="display">Write it down</h2>
+            </div>
+          </header>
+
+          <article class="capture-panel capture-panel--single">
+            <div class="text-ai-field">
+              <textarea id="capture-textarea" rows="8">The part that stayed with me most is how stories become social glue. I want to connect that to online communities and rituals.</textarea>
+              <div class="text-ai-inline__result" id="text-ai-result-wrap" hidden>
+                <div class="text-ai-preview" id="text-ai-result"></div>
+              </div>
+            </div>
+            <div class="text-ai-inline">
+              <div class="text-ai-inline__actions">
+                <button type="button" class="ai-mini-btn" data-text-ai-mode="summarize">
+                  <span class="ai-mini-btn__icon"><svg class="icon"><use href="#i-star"></use></svg></span>
+                  <span class="ai-mini-btn__label">Summarize</span>
+                </button>
+                <button type="button" class="ai-mini-btn" data-text-ai-mode="expand">
+                  <span class="ai-mini-btn__icon"><svg class="icon"><use href="#i-star"></use></svg></span>
+                  <span class="ai-mini-btn__label">Expand idea</span>
+                </button>
+                <button type="button" class="ai-mini-btn" id="text-direct-save-button">
+                  <span class="ai-mini-btn__icon"><svg class="icon"><use href="#i-bookmark"></use></svg></span>
+                  <span class="ai-mini-btn__label">Save</span>
+                </button>
+              </div>
+
+              <div class="capture-inline-actions text-ai-inline__footer" id="text-ai-footer" hidden>
+                <button type="button" class="btn btn--ghost btn--slim" id="text-ai-cancel-button">Cancel</button>
+                <button type="button" class="btn btn--secondary btn--slim" id="text-ai-regenerate-button">Regenerate</button>
+                <button type="button" class="btn btn--primary btn--slim" id="text-ai-accept-button">Confirm</button>
+              </div>
+
+              <div class="text-ai-inline__save" id="text-ai-save-wrap" hidden>
+                <div class="capture-inline-actions">
+                  <button type="button" class="btn btn--ghost btn--slim" id="text-ai-new-book-button">New book</button>
+                </div>
+                <label class="book-field" id="text-ai-save-field">
+                  <span>Save into book</span>
+                  <select id="text-ai-book-select" class="book-select"></select>
+                </label>
+                <p class="settings-status text-ai-inline__status" id="text-ai-save-status"></p>
+                <div class="capture-inline-actions">
+                  <button type="button" class="btn btn--primary btn--slim" id="text-ai-save-button">Save to existing book</button>
+                </div>
+              </div>
+
+              <div class="capture-inline-actions text-edit-actions" id="text-edit-actions" hidden>
+                <button type="button" class="btn btn--primary btn--slim" id="text-edit-save-button">Save changes</button>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="screen" id="screen-capture-image" data-screen="capture-image" data-nav="none">
+          <header class="page-chrome page-chrome--leading">
+            <button type="button" class="icon-btn" aria-label="Back" data-back>
+              <svg class="icon"><use href="#i-arrow-left"></use></svg>
+            </button>
+            <div>
+              <p class="eyebrow">Image</p>
+              <h2 class="display">Capture a page</h2>
+            </div>
+          </header>
+
+          <article class="capture-panel capture-panel--single">
+            <input id="capture-image-input" type="file" accept="image/*" hidden>
+            <button type="button" class="upload-tile" id="capture-image-picker">
+              <svg class="icon"><use href="#i-upload"></use></svg>
+              <strong>Choose a page snapshot</strong>
+              <small>Extract text from a note, quote, or book page.</small>
+            </button>
+            <div class="capture-image-card" id="capture-image-card" hidden>
+              <img id="capture-image-preview" alt="Selected image preview">
+            </div>
+            <div class="capture-inline-actions">
+              <button type="button" class="btn btn--secondary btn--slim" id="image-process-button">Recognize text</button>
+              <button type="button" class="btn btn--secondary btn--slim" id="image-polish-button">AI polish</button>
+            </div>
+            <label class="book-field">
+              <span>Recognized text</span>
+              <textarea id="image-text-editor" rows="9" placeholder="Recognized text will appear here so you can edit it before saving."></textarea>
+            </label>
+            <label class="book-field" id="image-book-field">
+              <span>Save into book</span>
+              <select id="image-book-select" class="book-select"></select>
+            </label>
+            <button type="button" class="btn btn--primary btn--slim" id="image-save-button">Confirm save</button>
+          </article>
+        </section>
+
+        <section class="screen" id="screen-processing" data-screen="processing" data-nav="none">
+          <header class="page-chrome">
+            <button type="button" class="icon-btn" aria-label="Back" data-back>
+              <svg class="icon"><use href="#i-arrow-left"></use></svg>
+            </button>
+            <div>
+              <p class="eyebrow" id="processing-label">AI Processing</p>
+              <h2 class="display" id="processing-title">Transcription</h2>
+            </div>
+          </header>
+
+          <article class="card transcript-card">
+            <span class="transcript-card__meta" id="processing-meta">Latest capture</span>
+            <p id="processing-transcript">The purpose of life is not to be happy. It is to be useful, to be honorable, to be compassionate, and to keep noticing what changes us while we read.</p>
+          </article>
+
+          <section class="section-block">
+            <div class="section-title">
+              <h3>AI Suggestions</h3>
+            </div>
+            <div class="suggestion-list">
+              <button type="button" class="suggestion is-active" data-suggestion="summarize">
+                <span class="suggestion__icon"><svg class="icon"><use href="#i-bookmark"></use></svg></span>
+                <span><strong>Summarize</strong><small>Get key points</small></span>
+              </button>
+              <button type="button" class="suggestion" data-suggestion="expand">
+                <span class="suggestion__icon"><svg class="icon"><use href="#i-star"></use></svg></span>
+                <span><strong>Expand Idea</strong><small>Explore deeper</small></span>
+              </button>
+              <button type="button" class="suggestion" data-suggestion="question">
+                <span class="suggestion__icon"><svg class="icon"><use href="#i-send"></use></svg></span>
+                <span><strong>Ask Question</strong><small>Dig into details</small></span>
+              </button>
+            </div>
+          </section>
+
+          <article class="card suggestion-preview" id="suggestion-preview">
+            <p class="eyebrow">Suggestion preview</p>
+            <h3>The note centers on purpose as practiced through service, dignity, and compassion instead of emotion alone.</h3>
+            <p>This becomes a nice bridge between your reading and your own capture habit: record what changes you, not just what you agree with.</p>
+          </article>
+
+          <section class="card processing-save">
+            <div class="section-title">
+              <h3>Save into book</h3>
+              <span class="tag tag--sky">AI Suggestion</span>
+            </div>
+            <p class="processing-save__hint" id="processing-save-hint">Choose which book should keep this cleaned note, or create a new one first.</p>
+            <label class="book-field">
+              <span>Choose a book</span>
+              <select id="processing-book-select" class="book-select"></select>
+            </label>
+            <p class="settings-status processing-save__status" id="processing-save-status">AI recommends saving this note back to your shelf while the context is still fresh.</p>
+            <div class="processing-save__actions">
+              <button type="button" class="btn btn--ghost btn--wide" id="processing-new-book-button">New book</button>
+              <button type="button" class="btn btn--primary btn--wide" id="processing-save-button">Save to selected book</button>
+            </div>
+          </section>
+        </section>
+
+        <section class="screen" id="screen-book-add" data-screen="book-add" data-nav="none">
+          <header class="page-chrome page-chrome--leading">
+            <button type="button" class="icon-btn" aria-label="Back" data-back>
+              <svg class="icon"><use href="#i-arrow-left"></use></svg>
+            </button>
+            <div>
+              <p class="eyebrow">New Book</p>
+              <h2 class="display">Add a book</h2>
+            </div>
+          </header>
+
+          <article class="capture-panel capture-panel--single book-add-form">
+            <p class="settings-status processing-save__status" id="book-add-context">Create a new book and place the current processed note into it in one step.</p>
+            <input id="book-cover-input" type="file" accept="image/*" hidden>
+            <button type="button" class="upload-tile" id="book-cover-picker">
+              <svg class="icon"><use href="#i-upload"></use></svg>
+              <strong>Upload cover</strong>
+              <small>Add the book cover image.</small>
+            </button>
+            <div class="capture-image-card" id="book-cover-card" hidden>
+              <img id="book-cover-preview" alt="Selected book cover preview">
+              <div>
+                <p class="capture-status capture-status--tight">Cover ready.</p>
+                <p class="capture-transcript-preview capture-transcript-preview--small" id="book-cover-name">Your uploaded cover will appear here.</p>
+              </div>
+            </div>
+            <label class="book-field">
+              <span>Book title</span>
+              <input id="book-title-input" type="text" placeholder="Enter book title">
+            </label>
+            <label class="book-field">
+              <span>Author</span>
+              <input id="book-author-input" type="text" placeholder="Enter author name">
+            </label>
+            <label class="book-field">
+              <span>Start reading</span>
+              <input id="book-start-input" type="date">
+            </label>
+            <label class="book-field">
+              <span>Finish reading</span>
+              <input id="book-end-input" type="date">
+            </label>
+            <button type="button" class="btn btn--primary btn--wide" id="book-save-button">Add to bookshelf</button>
+          </article>
+        </section>
+
+        <section class="screen screen--chat" id="screen-ai-chat" data-screen="ai-chat" data-nav="none">
+          <header class="page-chrome">
+            <button type="button" class="icon-btn" aria-label="Back" data-back>
+              <svg class="icon"><use href="#i-arrow-left"></use></svg>
+            </button>
+            <div>
+              <p class="eyebrow">AI Reading Partner</p>
+              <h2 class="display">Discuss with Momo</h2>
+            </div>
+            <button type="button" class="icon-btn" aria-label="More">
+              <svg class="icon"><use href="#i-more"></use></svg>
+            </button>
+          </header>
+
+          <div class="chat-stage">
+            <div class="chat-stage__hero">
+              <div class="chat-stage__avatar">
+                <img src="assets/cat-hd-smile.png" alt="Momo avatar">
+              </div>
+              <div class="chat-stage__copy">
+                <p class="eyebrow">Momo</p>
+                <div class="chat-personas" id="chat-personas"></div>
+                <p class="chat-persona-hint" id="chat-persona-hint"></p>
+              </div>
+            </div>
+
+            <div class="chat-stream" id="chat-stream"></div>
+
+            <div class="chat-actions">
+              <div class="chat-selection-toolbar" id="chat-selection-toolbar" hidden>
+                <div class="chat-selection-toolbar__actions">
+                  <button type="button" class="pill-link" id="chat-save-selected-button">Save selected</button>
+                  <button type="button" class="pill-link pill-link--ghost" id="chat-delete-selected-button">Delete selected</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form id="chat-form" class="chat-input" autocomplete="off">
+            <p class="chat-voice-status" id="chat-voice-status" hidden></p>
+            <input id="chat-text" type="text" placeholder="Ask anything..." aria-label="Chat input">
+            <button type="button" class="icon-btn chat-voice-btn" id="chat-voice-button" aria-label="Voice input">
+              <svg class="icon"><use href="#i-mic"></use></svg>
+            </button>
+            <button type="submit" class="send-btn" aria-label="Send">
+              <svg class="icon"><use href="#i-send"></use></svg>
+            </button>
+          </form>
+        </section>
+
+        <section class="screen" id="screen-insights" data-screen="insights" data-nav="none">
+          <header class="page-chrome">
+            <button type="button" class="icon-btn" aria-label="Back" data-back>
+              <svg class="icon"><use href="#i-arrow-left"></use></svg>
+            </button>
+            <div>
+              <p class="eyebrow">Insights</p>
+              <h2 class="display">Reading growth</h2>
+            </div>
+            <div class="avatar avatar--tiny">
+              <img src="assets/cat-hd-smile.png" alt="Momo avatar">
+            </div>
+          </header>
+
+          <article class="card insights-hero">
+            <div>
+              <p class="eyebrow">Books Read</p>
+              <h3 data-bind="books-total">0</h3>
+            </div>
+            <div class="bars">
+              <span style="--bar:45%"></span>
+              <span style="--bar:58%"></span>
+              <span style="--bar:67%"></span>
+              <span style="--bar:78%"></span>
+              <span style="--bar:92%"></span>
+              <span style="--bar:100%"></span>
+            </div>
+            <div class="bars__labels">
+              <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+            </div>
+          </article>
+
+          <div class="insights-grid">
+            <article class="card insight-mini insight-mini--warm">
+              <p class="eyebrow">Most Active Time</p>
+              <h3>Evenings <svg class="mini-icon" viewBox="0 0 24 24"><use href="#i-moon"></use></svg></h3>
+              <div class="spark spark--line">
+                <span></span>
+                <svg viewBox="0 0 140 40" preserveAspectRatio="none">
+                  <path d="M8 28 C28 10, 40 12, 58 24 S96 34, 130 10" fill="none" stroke="#7fa7cf" stroke-linecap="round" stroke-width="4"/>
+                </svg>
+              </div>
+            </article>
+
+            <article class="card insight-mini insight-mini--blue">
+              <p class="eyebrow">Total Notes</p>
+              <h3 data-bind="notes-total">0</h3>
+              <div class="mini-sheet"></div>
+            </article>
+          </div>
+
+          <article class="card trend-card">
+            <div class="section-title">
+              <h3>Weekly note trend</h3>
+              <span class="tag tag--sky">+18%</span>
+            </div>
+            <div class="trend-bars">
+              <span style="--bar:40%"></span>
+              <span style="--bar:62%"></span>
+              <span style="--bar:55%"></span>
+              <span style="--bar:78%"></span>
+              <span style="--bar:68%"></span>
+              <span style="--bar:95%"></span>
+              <span style="--bar:88%"></span>
+            </div>
+          </article>
+        </section>
+
+        <section class="screen" id="screen-search" data-screen="search" data-nav="none">
+          <header class="page-chrome">
+            <button type="button" class="icon-btn" aria-label="Back" data-back>
+              <svg class="icon"><use href="#i-arrow-left"></use></svg>
+            </button>
+            <div>
+              <p class="eyebrow">Search</p>
+              <h2 class="display">Find books, notes, and insights</h2>
+            </div>
+          </header>
+
+          <label class="searchbox" for="search-input">
+            <svg class="icon"><use href="#i-search"></use></svg>
+            <input id="search-input" type="search" placeholder="Search books, notes, insights...">
+          </label>
+
+          <div class="filter-row" id="filter-row">
+            <button type="button" class="filter-chip is-active" data-filter="all">All</button>
+            <button type="button" class="filter-chip" data-filter="books">Books</button>
+            <button type="button" class="filter-chip" data-filter="notes">Notes</button>
+            <button type="button" class="filter-chip" data-filter="insights">Insights</button>
+          </div>
+
+          <div id="search-results" class="search-results"></div>
+        </section>
+
+        <section class="screen" id="screen-profile" data-screen="profile" data-nav="primary">
+          <div class="profile-shell">
+            <header class="page-chrome">
+              <div>
+                <p class="eyebrow">Profile</p>
+                <h2 class="display">Personal space</h2>
+              </div>
+            </header>
+
+            <div class="profile-unified">
+              <div class="profile-unified__top">
+                <div class="profile-avatar">
+                  <img src="assets/cat-hd-smile.png" alt="Profile cat">
+                </div>
+                <div>
+                  <h3>Momo</h3>
+                  <p>Keep reading, keep growing.</p>
+                </div>
+              </div>
+
+              <div class="profile-stats profile-stats--flat">
+                <div class="profile-stat">
+                  <span>Notes</span>
+                  <strong data-bind="notes-total">0</strong>
+                </div>
+                <div class="profile-stat profile-stat--accent">
+                  <span>AI Chats</span>
+                  <strong data-bind="ai-chats-total">18</strong>
+                </div>
+                <div class="profile-stat">
+                  <span>Books Read</span>
+                  <strong data-bind="books-read-total">0</strong>
+                </div>
+              </div>
+
+              <div class="settings-list settings-list--flat">
+                <button type="button" class="settings-item settings-item--flat" data-profile-section-toggle="preferences">
+                  <span class="settings-item__left">
+                    <svg class="icon"><use href="#i-gear"></use></svg>
+                    <span>Preferences</span>
+                  </span>
+                  <span class="settings-item__meta" id="profile-preferences-summary">English</span>
+                </button>
+                <div class="settings-panel settings-panel--inline" id="profile-preferences-panel">
+                  <div class="settings-choice-group">
+                    <button type="button" class="settings-subitem" data-profile-section-toggle="language">
+                      <span class="settings-subitem__label">Language</span>
+                      <span class="settings-subitem__value" id="profile-language-summary">English</span>
+                    </button>
+                    <div class="settings-panel settings-panel--nested" id="profile-language-panel" hidden>
+                      <button type="button" class="settings-option is-active" data-language="en">
+                        <span>English</span>
+                        <span class="settings-option__check">✓</span>
+                      </button>
+                      <button type="button" class="settings-option" data-language="zh">
+                        <span>中文</span>
+                        <span class="settings-option__check">✓</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="settings-item settings-item--flat" data-profile-section-toggle="ai-settings">
+                  <span class="settings-item__left">
+                    <svg class="icon"><use href="#i-star"></use></svg>
+                    <span>AI Service</span>
+                  </span>
+                  <span class="settings-item__meta" id="profile-ai-summary">Local preview mode</span>
+                </button>
+                <div class="settings-panel settings-panel--inline" id="profile-ai-panel" hidden>
+                  <label class="book-field book-field--compact">
+                    <span>API endpoint</span>
+                    <input id="ai-endpoint-input" type="text" placeholder="https://your-endpoint/v1/chat/completions">
+                  </label>
+                  <label class="book-field book-field--compact">
+                    <span>Model</span>
+                    <input id="ai-model-input" type="text" placeholder="gpt-4o-mini">
+                  </label>
+                  <label class="book-field book-field--compact">
+                    <span>Access token</span>
+                    <input id="ai-token-input" type="password" placeholder="Paste your token">
+                  </label>
+                  <div class="capture-inline-actions capture-inline-actions--profile">
+                    <button type="button" class="btn btn--secondary btn--slim" id="ai-settings-test-button">Test connection</button>
+                    <button type="button" class="btn btn--primary btn--slim" id="ai-settings-save-button">Save AI settings</button>
+                  </div>
+                  <p class="settings-status" id="ai-settings-status">Add an OpenAI-compatible endpoint and token to activate live AI features.</p>
+                </div>
+                <button type="button" class="settings-item settings-item--flat">
+                  <span class="settings-item__left">
+                    <svg class="icon"><use href="#i-clock"></use></svg>
+                    <span>Data &amp; Sync</span>
+                  </span>
+                  <span class="settings-item__meta">iCloud synced</span>
+                </button>
+                <button type="button" class="settings-item settings-item--flat">
+                  <span class="settings-item__left">
+                    <svg class="icon"><use href="#i-bookmark"></use></svg>
+                    <span>About Moment Record</span>
+                  </span>
+                  <span class="settings-item__meta">Version 0.1</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="quick-sheet-wrap" id="quick-sheet-wrap" hidden>
+        <button type="button" class="quick-sheet-backdrop" id="quick-sheet-backdrop" aria-label="Close quick actions"></button>
+        <div class="quick-sheet card">
+          <div class="quick-sheet__header">
+            <p class="eyebrow">Quick Add</p>
+            <h3>Catch the thought before it fades.</h3>
+          </div>
+          <div class="quick-sheet__actions">
+            <button type="button" class="quick-action" data-quick-mode="voice">
+              <span class="quick-action__icon"><svg class="icon"><use href="#i-mic"></use></svg></span>
+              <span><strong>Voice</strong><small>Speak freely</small></span>
+            </button>
+            <button type="button" class="quick-action" data-quick-mode="text">
+              <span class="quick-action__icon"><svg class="icon"><use href="#i-pen"></use></svg></span>
+              <span><strong>Text</strong><small>Write a thought</small></span>
+            </button>
+            <button type="button" class="quick-action" data-quick-mode="image">
+              <span class="quick-action__icon"><svg class="icon"><use href="#i-camera"></use></svg></span>
+              <span><strong>Image</strong><small>Capture a page</small></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-sheet-wrap" id="books-sheet-wrap" hidden>
+        <button type="button" class="quick-sheet-backdrop" id="books-sheet-backdrop" aria-label="Close bookshelf actions"></button>
+        <div class="quick-sheet quick-sheet--bookshelf card">
+          <div class="books-menu">
+            <button type="button" class="books-menu__item" data-group-create>
+              <strong>New group</strong>
+              <small>Create a brand new group</small>
+            </button>
+            <button type="button" class="books-menu__item" data-group-rename>
+              <strong>Rename group</strong>
+              <small>Rename the selected group</small>
+            </button>
+            <button type="button" class="books-menu__item" data-books-delete-selected>
+              <strong>Delete books</strong>
+              <small>Delete selected books</small>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-lightbox" id="image-lightbox" hidden>
+        <button type="button" class="image-lightbox__backdrop" id="image-lightbox-backdrop" aria-label="Close image preview"></button>
+        <div class="image-lightbox__sheet">
+          <img id="image-lightbox-image" alt="Expanded note image preview">
+        </div>
+      </div>
+
+      <nav class="tabbar" id="primary-nav" aria-label="Primary navigation">
+        <button type="button" class="tabbar__item is-active" data-target="home" data-tab="home">
+          <svg class="icon"><use href="#i-home"></use></svg>
+          <span>Home</span>
+        </button>
+        <button type="button" class="tabbar__item" data-target="bookshelf" data-tab="bookshelf">
+          <svg class="icon"><use href="#i-books"></use></svg>
+          <span>Books</span>
+        </button>
+        <button type="button" class="tabbar__item tabbar__item--capture" data-target="book-add" data-tab="book-add" aria-label="Add book">
+          <span class="tabbar__plus">
+            <svg class="icon"><use href="#i-plus"></use></svg>
+          </span>
+        </button>
+        <button type="button" class="tabbar__item" data-target="capture" data-tab="capture">
+          <svg class="icon"><use href="#i-cat"></use></svg>
+          <span>Capture</span>
+        </button>
+        <button type="button" class="tabbar__item" data-target="profile" data-tab="profile">
+          <svg class="icon"><use href="#i-user"></use></svg>
+          <span>Profile</span>
+        </button>
+      </nav>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
+
